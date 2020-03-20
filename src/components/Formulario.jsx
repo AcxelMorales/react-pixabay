@@ -17,6 +17,7 @@ const Formulario = ({ setBusqueda }) => {
     setError(false);
 
     setBusqueda(termino);
+    document.getElementById("txt").value = "";
   };
 
   return (
@@ -24,6 +25,8 @@ const Formulario = ({ setBusqueda }) => {
       <div className="row">
         <div className="form-group col-md-8">
           <input
+            id="txt"
+            autoComplete="off"
             type="text"
             className="form-control form-control-lg"
             placeholder="Busca una imágen, ejemplo: Música o Café"
